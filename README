@@ -1,0 +1,108 @@
+filen_io_webdav
+===============
+
+이 코드는 *filen.io 의 E2EE 클라우드 스토리지 서비스를 local WebDAV으로 마운트하는 유틸리티입니다.
+
+/***
+ *     █████╗██╗██╗  ████╗              ██╗
+ *    ██╔═══╝╚═╝██║██╔═══██╗            ╚═╝  ████╗
+ *    █████╗ ██╗██║████████║  ████╗     ██╗██╔═══██╗
+ *    ██╔══╝ ██║██║██╔═════╝██╔══╗██╗   ██║██║   ██║
+ *    ██║    ██║██║╚╗██████╗██║  ║██║██╗██║╚╗████╔═╝
+ *    ╚═╝    ╚═╝╚═╝ ╚══════╝╚═╝  ╚══╝╚═╝╚═╝ ╚════╝
+ *     ██╗      ██╗    ██╗  ████╗  ██╗      ██████╗  █████╗ ██╗   ██╗
+ *     ╚═██╗    ██║    ██║██╔═══██╗██║      ██╔══██╗██╔══██╗██║   ██║
+ *   ████████╗  ██║ █╗ ██║████████║███████═╗██║  ██║███████║██╚╗  ██║
+ *   ╚═══██╔═╝  ██║███╗██║██╔═════╝██╔═══██║██║  ██║██╔═╗██║ ██║ ██╔╝
+ *     ██╔═╝    ╚███╔███╔╝ ╚██████╗███████╔╝██████╔╝██║ ║██║ ╚╗██╔═╝
+ *      ╚╝       ╚══╝╚══╝   ╚═════╝╚══════╝ ╚═════╝ ╚═╝ ╚══╝  ╚══╝
+ */
+
+
+DISCLAIMER
+----------
+
+이 코드는 어떠한 보증도 없이 "있는 그대로" 제공됩니다.
+
+이 코드의 사용으로 인한 직접적이거나 간접적인 손해에 대해 저자는 책임지지 않습니다.
+
+이 코드를 사용함으로써 발생하는 모든 위험은 사용자가 감수해야 합니다. 사용 전, 시스템에 적합한지 충분히 검토하고 테스트하시기 바랍니다.
+
+
+TODO
+----
+
+[X] Login / Fetch encryption key
+
+[X] File De/Encrypt
+
+[ ] Upload/Download
+
+[ ] WebDAV
+
+[ ] Signin token
+
+
+Server List
+-----------
+
+- REST
+	https://gateway.filen.io
+	https://gateway.filen.net
+	https://gateway.filen-1.net
+	https://gateway.filen-2.net
+	https://gateway.filen-3.net
+	https://gateway.filen-4.net
+	https://gateway.filen-5.net
+	https://gateway.filen-6.net
+
+- Upload
+	https://ingest.filen.io
+	https://ingest.filen.net
+	https://ingest.filen-1.net
+	https://ingest.filen-2.net
+	https://ingest.filen-3.net
+	https://ingest.filen-4.net
+	https://ingest.filen-5.net
+	https://ingest.filen-6.net
+
+- Download
+	https://egest.filen.io
+	https://egest.filen.net
+	https://egest.filen-1.net
+	https://egest.filen-2.net
+	https://egest.filen-3.net
+	https://egest.filen-4.net
+	https://egest.filen-5.net
+	https://egest.filen-6.net
+		
+
+License
+-------
+
+Unlicense 
+
+This is free and unencumbered software released into the public domain.
+Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.
+In jurisdictions that recognize copyright laws, the author or authors of this software dedicate any and all copyright interest in the software to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+For more information, please refer to <http://unlicense.org/>
+
+
+---
+(*) https://filen.io/
+
+*filen은 독일에 본사를 둔 클라우드 스토리지서버 서비스를 제공하는 회사입니다.
+
+**종단간암호화(E2EE) 스토리지 서비스와 암호화폐 결제를 지원하며 lifetime(평생) 플랜 (그리고 그 이상) 등의 장점이 있습니다.
+
+또한 이 서비스가 제공하는 결제방식, 슬로건문구, 사무실 위치가 마음을 움직였고, 제 코인을 털게 만들었습니다. :))
+
+"OUR MISSION: Privacy is a fundamental human right, and we respect that."
+
+
+(**) 저는 filen과 관계가 없는 사람입니다. 그저 lifetime 사용자일 뿐입니다. 맹세해요.
+
+(***) E2EE 코드는 그들이 공개한 SDK(https://github.com/FilenCloudDienste) 또는 SDK내용으로 작성된 filen_utils.c를 확인해보세요.
+
